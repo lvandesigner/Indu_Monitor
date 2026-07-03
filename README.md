@@ -674,6 +674,6 @@ vivado Indu_Monitor.xpr
 
 ---
 
-> **作者**: smith lvan
+> **作者**: smith lvan && yszaygr2138
 > **Git 分支**: `main`
 > **最近提交**: `a0d4eea` — fix:第一次提交
