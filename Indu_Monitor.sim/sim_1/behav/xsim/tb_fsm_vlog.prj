@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Indu_Monitor.srcs/sources_1/new/bcd_3digit.v" \
+"../../../../Indu_Monitor.srcs/sources_1/new/fsm.v" \
+"../../../../Indu_Monitor.srcs/sim_1/new/tb_fsm.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,502 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Jul  4 00:17:32 2026
+# Process ID: 8024
+# Current directory: C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.runs/synth_1/top.vds
+# Journal file: C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.runs/synth_1\vivado.jou
+# Running On: lvan, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 10, Host memory: 16898 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 486.727 ; gain = 180.707
+Command: read_checkpoint -auto_incremental -incremental C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7s6ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s6'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s6'
+INFO: [Device 21-403] Loading part xc7s6ftgb196-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28108
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1289.137 ; gain = 439.617
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'key_debounce' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/key_debounce.v:23]
+	Parameter COUNT_10MS bound to: 25'b0000001111010000100100000 
+INFO: [Synth 8-6155] done synthesizing module 'key_debounce' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/key_debounce.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ad_ctrl' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/ad_ctrl.v:23]
+	Parameter P_SYS_CLK bound to: 28'b0010111110101111000010000000 
+	Parameter P_IIC_SCL bound to: 28'b0000000000011110100001001000 
+	Parameter P_DEVICE_ADDR bound to: 7'b1010100 
+	Parameter P_ADDR_BYTE_NUM bound to: 8'b00000001 
+	Parameter P_DATA_BYTE_NUM bound to: 8'b00000010 
+INFO: [Synth 8-6157] synthesizing module 'iic_drive' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/iic_drive.v:23]
+	Parameter P_SYS_CLK bound to: 28'b0010111110101111000010000000 
+	Parameter P_IIC_SCL bound to: 28'b0000000000011110100001001000 
+	Parameter P_DEVICE_ADDR bound to: 7'b1010100 
+	Parameter P_ADDR_BYTE_NUM bound to: 8'b00000001 
+	Parameter P_DATA_BYTE_NUM bound to: 8'b00000010 
+INFO: [Synth 8-6155] done synthesizing module 'iic_drive' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/iic_drive.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ad_ctrl' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/ad_ctrl.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fsm' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/fsm.v:28]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/fsm.v:260]
+INFO: [Synth 8-6157] synthesizing module 'bcd_3digit' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/bcd_3digit.v:23]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bcd_3digit' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/bcd_3digit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'bcd_2digit' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/bcd_2digit.v:23]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bcd_2digit' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/bcd_2digit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'max_min' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/max_min.v:1]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter DATA_DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'max_min' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/max_min.v:1]
+INFO: [Synth 8-6157] synthesizing module 'moving_average' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/moving_average.v:1]
+	Parameter DATA_DEPTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter WINDOW bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'moving_average' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/moving_average.v:1]
+INFO: [Synth 8-6157] synthesizing module 'normalization' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/normalization.v:8]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'normalization' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/normalization.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rle_encode' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/rle_encode.v:1]
+	Parameter DATA_DEPTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter CNT_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/rle_encode.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'rle_encode' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/rle_encode.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'fsm' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/fsm.v:28]
+INFO: [Synth 8-6157] synthesizing module 'seven_segment' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/seven_segment.v:23]
+	Parameter COUNT_10MS bound to: 25'b0000001111010000100100000 
+INFO: [Synth 8-226] default block is never used [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/seven_segment.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'seven_segment' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/seven_segment.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ds1302_wr_drive' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/ds1302_wr_drive.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/ds1302_wr_drive.v:120]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/ds1302_wr_drive.v:162]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/ds1302_wr_drive.v:203]
+INFO: [Synth 8-6157] synthesizing module 'ds1302_io_convert' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/ds1302_io_convert.v:7]
+INFO: [Synth 8-6157] synthesizing module 'spi_master' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/spi_master.v:1]
+	Parameter SYS_CLK bound to: 28'b0010111110101111000010000000 
+	Parameter SPI_SCLK bound to: 28'b0000000000011000011010100000 
+	Parameter SPI_CPOL bound to: 1'b0 
+	Parameter SPI_CPHA bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'spi_master' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/spi_master.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ds1302_io_convert' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/ds1302_io_convert.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'ds1302_wr_drive' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/ds1302_wr_drive.v:4]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/uart_tx.v:23]
+	Parameter UART_BPS bound to: 115200 - type: integer 
+	Parameter P_SYS_CLK bound to: 28'b0010111110101111000010000000 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/uart_tx.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1510.852 ; gain = 661.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1510.852 ; gain = 661.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1510.852 ; gain = 661.332
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 1510.852 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/constrs_1/new/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1550.820 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1550.820 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1550.820 ; gain = 701.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s6ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1550.820 ; gain = 701.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1550.820 ; gain = 701.301
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'normalization'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'rle_encode'
+INFO: [Synth 8-802] inferred FSM for state register 'result_index_1_reg' in module 'fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'spi_state_reg' in module 'spi_master'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ds1302_io_convert'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ds1302_wr_drive'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               00
+                 iSTATE0 |                             0010 |                               01
+                 iSTATE1 |                             0100 |                               10
+                 iSTATE2 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'rle_encode'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                            00001 |                            00001
+                  iSTATE |                            00010 |                            00010
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'result_index_1_reg' in module 'fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                             0000
+             H_SCLK_IDLE |                              101 |                             0001
+               SCLK_EDGE |                              100 |                             0010
+            L_HALF_CYCLE |                              011 |                             0011
+                     ACK |                              010 |                             0100
+                ACK_WAIT |                              001 |                             0101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'spi_state_reg' using encoding 'sequential' in module 'spi_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                         00000001 |                             0000
+                 CE_HIGH |                         10000000 |                             0001
+               READ_ADDR |                         01000000 |                             0010
+               READ_DATA |                         00100000 |                             0011
+              WRITE_ADDR |                         00010000 |                             0100
+              WRITE_DATA |                         00001000 |                             0101
+                     ACK |                         00000100 |                             0110
+                  CE_LOW |                         00000010 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'ds1302_io_convert'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                00000000000000001 |                            00000
+                WRITE_WP |                00000000000000010 |                            00001
+              WRITE_YEAR |                00000000000000100 |                            00010
+              WRITE_WEEK |                00000000000001000 |                            00011
+               WRITE_MON |                00000000000010000 |                            00100
+              WRITE_DATE |                00000000000100000 |                            00101
+              WRITE_HOUR |                00000000001000000 |                            00110
+               WRITE_MIN |                00000000010000000 |                            00111
+               WRITE_SEC |                00000000100000000 |                            01000
+               READ_YEAR |                00000001000000000 |                            01001
+               READ_WEEK |                00000010000000000 |                            01010
+                READ_MON |                00000100000000000 |                            01011
+               READ_DATE |                00001000000000000 |                            01100
+               READ_HOUR |                00010000000000000 |                            01101
+                READ_MIN |                00100000000000000 |                            01110
+                READ_SEC |                01000000000000000 |                            01111
+                     ACK |                10000000000000000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'ds1302_wr_drive'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1550.820 ; gain = 701.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 7     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   28 Bit       Adders := 2     
+	   2 Input   25 Bit       Adders := 4     
+	   3 Input   15 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
+	   3 Input   10 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 5     
+	   3 Input    8 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 10    
+	   2 Input    4 Bit       Adders := 49    
+	   3 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	              512 Bit    Registers := 1     
+	              128 Bit    Registers := 7     
+	               64 Bit    Registers := 16    
+	               32 Bit    Registers := 32    
+	               28 Bit    Registers := 2     
+	               25 Bit    Registers := 4     
+	               24 Bit    Registers := 17    
+	               16 Bit    Registers := 3     
+	               15 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 180   
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 17    
+	                4 Bit    Registers := 23    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 34    
++---Muxes : 
+	   2 Input  512 Bit        Muxes := 30    
+	   5 Input   32 Bit        Muxes := 16    
+	   2 Input   28 Bit        Muxes := 3     
+	   2 Input   25 Bit        Muxes := 4     
+	  17 Input   17 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 17    
+	   2 Input   16 Bit        Muxes := 1     
+	   4 Input   15 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 110   
+	   4 Input    8 Bit        Muxes := 6     
+	   5 Input    8 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 3     
+	   3 Input    8 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 3     
+	   5 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   3 Input    5 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 7     
+	   2 Input    4 Bit        Muxes := 65    
+	   4 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 10    
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 227   
+	   4 Input    1 Bit        Muxes := 55    
+	   5 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 10 (col length:20)
+BRAMs: 10 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP diff_x100_reg_reg, operation Mode is: (A*(B:0x64))'.
+DSP Report: register diff_x100_reg_reg is absorbed into DSP diff_x100_reg_reg.
+DSP Report: operator diff_x100_reg0 is absorbed into DSP diff_x100_reg_reg.
+WARNING: [Synth 8-7129] Port ds_data[55] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[54] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[53] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[52] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[51] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[50] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[49] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[48] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[47] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[46] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[45] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[44] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[43] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[42] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[41] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[40] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[39] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[38] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[37] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[36] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[35] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[34] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[33] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[32] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[31] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[30] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[29] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[28] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[27] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[26] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[25] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ds_data[24] in module fsm is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (ds1302_wr_drive_list/FSM_onehot_state_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ds1302_wr_drive_list/FSM_onehot_state_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ds1302_wr_drive_list/FSM_onehot_state_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ds1302_wr_drive_list/FSM_onehot_state_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ds1302_wr_drive_list/FSM_onehot_state_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ds1302_wr_drive_list/FSM_onehot_state_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ds1302_wr_drive_list/FSM_onehot_state_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ds1302_wr_drive_list/FSM_onehot_state_reg[1]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1550.820 ; gain = 701.301
+---------------------------------------------------------------------------------
+ Sort Area is  diff_x100_reg_reg_0 : 0 0 : 283 283 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++--------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|normalization | (A*(B:0x64))' | 15     | 7      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 1    | 0    | 
++--------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1550.820 ; gain = 701.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1550.820 ; gain = 701.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1631.051 ; gain = 781.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1644.602 ; gain = 795.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1644.602 ; gain = 795.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1644.602 ; gain = 795.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1644.602 ; gain = 795.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1644.602 ; gain = 795.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1644.602 ; gain = 795.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|normalization | (A*B)'      | 15     | 7      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   136|
+|3     |DSP48E1 |     1|
+|4     |LUT1    |    19|
+|5     |LUT2    |   173|
+|6     |LUT3    |   453|
+|7     |LUT4    |   466|
+|8     |LUT5    |   468|
+|9     |LUT6    |  1124|
+|10    |MUXF7   |   178|
+|11    |MUXF8   |    53|
+|12    |FDCE    |   248|
+|13    |FDPE    |     7|
+|14    |FDRE    |  3492|
+|15    |FDSE    |     7|
+|16    |IBUF    |     6|
+|17    |IOBUF   |     2|
+|18    |OBUF    |    20|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1644.602 ; gain = 795.082
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 1644.602 ; gain = 755.113
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1644.602 ; gain = 795.082
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1656.648 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 370 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1660.355 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Synth Design complete | Checksum: a96e2974
+INFO: [Common 17-83] Releasing license: Synthesis
+70 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 1660.355 ; gain = 1169.684
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1660.355 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jul  4 00:18:34 2026...

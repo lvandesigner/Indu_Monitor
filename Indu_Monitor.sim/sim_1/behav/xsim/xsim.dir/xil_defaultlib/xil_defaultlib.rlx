@@ -1,0 +1,13 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sim_1/new/tb_fsm.v,1779024756,verilog,,,,tb_fsm,,,,,,,,
+C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/ad_ctrl.v,1778924699,verilog,,C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/bcd_3digit.v,,ad_ctrl,,,,,,,,
+C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/bcd_3digit.v,1778923135,verilog,,C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/fsm.v,,bcd_3digit,,,,,,,,
+C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/fsm.v,1778923608,verilog,,C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sim_1/new/tb_fsm.v,,fsm,,,,,,,,
+C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/iic_drive.v,1743682782,verilog,,C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/key_debounce.v,,iic_drive,,,,,,,,
+C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/key_debounce.v,1778849007,verilog,,C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/seven_segment.v,,key_debounce,,,,,,,,
+C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/seven_segment.v,1778913672,verilog,,C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/top.v,,seven_segment,,,,,,,,
+C:/Users/zhang/Desktop/test_fpga/Indu_Monitor/Indu_Monitor.srcs/sources_1/new/top.v,1779022916,verilog,,,,top,,,,,,,,
